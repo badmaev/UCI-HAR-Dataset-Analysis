@@ -18,7 +18,7 @@ columnNames <- tmp$V2
 #---------------------------------------------------------------------------------------------------#
 # Let's read and construct the Training dataset
 
-x_train = read.table("UCI HAR Dataset/train/X_train.txt", sep = "")
+x_train <- read.table("UCI HAR Dataset/train/X_train.txt", sep = "")
 names(x_train) <- columnNames
 y_train <- read.table("UCI HAR Dataset/train/y_train.txt", sep = "", col.names=c("activity"))
 y_train$activity <- as.factor(y_train$activity)
@@ -34,7 +34,7 @@ train <- cbind(x_train, trainSubjects, y_train, set)
 rm(set)
 #---------------------------------------------------------------------------------------------------#
 # Let's read and construct the Test dataset
-x_test = read.table("UCI HAR Dataset/test/X_test.txt", sep = "")
+x_test <- read.table("UCI HAR Dataset/test/X_test.txt", sep = "")
 names(x_test) <- columnNames
 y_test <- read.table("UCI HAR Dataset/test/y_test.txt", sep = "",col.names=c("activity"))
 y_test$activity <- as.factor(y_test$activity)
